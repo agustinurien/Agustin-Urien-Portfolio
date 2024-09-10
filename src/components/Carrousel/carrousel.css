@@ -1,0 +1,88 @@
+.carrouselContainer {
+    overflow-x: hidden;       
+    display: flex;
+    align-items: center; 
+    height: 100%;
+    width: 100%;
+    gap: 30px;
+    padding-left: 15px;
+}
+
+.box {
+    border: 1px solid #e7dece;
+    color: #e7dece;
+    height: 90%;
+}
+.box .card{
+    height: 100%;
+    transition: transform 0.5s, background-color 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'DM Sans Regular', sans-serif;
+    color: #e7dece;
+}
+
+.box .card h3{
+    margin: 0px;
+}
+.box .card:hover {
+    transform: translate3d(10px, -10px, 0);
+    background-color: #e7dece;
+    color: black;
+
+}
+
+.text{
+    padding: 10px;
+
+}
+.text p{
+    opacity: 0.9;
+
+}
+.date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+}
+.date h4{
+    font-size: 19px;
+    margin: 0px;
+}
+.card:hover .dot{
+    background: radial-gradient(circle, #e12c00 20%, rgba(255, 255, 255, 0)50%);
+}
+.dot{
+    border-radius: 100%;
+    font-size: 30px;
+    color: #e12c00;
+}
+
+.buttonCarrousel:hover{
+    color: black;
+    background-color: #e7dece;
+    
+}
+.buttonCarrousel:disabled{
+    pointer-events: none;
+    opacity: 0.3;
+    
+}
+
+.buttonCarrousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    
+
+}

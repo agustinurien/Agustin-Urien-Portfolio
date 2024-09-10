@@ -1,0 +1,56 @@
+.formContact{
+    height: 500px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.inputs{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 35px;
+    width: 100%;
+}
+input{
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, 0.048);
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.678);
+    height: 40px;
+    width: 85%;
+    font-family: 'DM Sans Regular', sans-serif;
+    color: white;
+}
+input::placeholder {
+    color: #ffffff; 
+    opacity: 1; 
+    font-size: 15px;
+}
+textarea{
+    background-color: rgba(255, 255, 255, 0.048);
+    border: 2px solid rgba(255, 255, 255, 0.63);
+    height: 200px;
+    width: 85%;
+    font-family: 'DM Sans Regular', sans-serif;
+    padding-left: 10px;
+    color: white;
+}
+textarea::placeholder {
+    color: #ffffff; 
+    opacity: 1; 
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+
+.buttonContact{
+    height: 42px;
+    width: 87%;
+    font-family: 'DM Sans Regular', sans-serif;
+    font-weight: 900;
+}

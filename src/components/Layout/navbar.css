@@ -1,0 +1,82 @@
+.navbarSection{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    font-family: 'DM Sans Regular', sans-serif;
+    z-index: 999;
+}
+.navbarSection div{
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    color: #e7dece;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    padding-left: 3%;
+}
+nav{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3%;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0px;
+}
+nav ul li{
+    
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    
+    width: 140px;
+    
+    
+}
+
+.efectoGlowA {
+    background-image: radial-gradient(at 50% 52%, rgba(255, 255, 255, 0.315) 5%, rgba(255, 255, 255, 0.055) 40%, rgba(255, 255, 255, 0) 60%);
+    background-repeat: no-repeat;
+    background-position: top;
+    animation: pulse 0.8s ease-in-out;
+    animation-fill-mode: forwards;
+}
+    @keyframes pulse {
+    0% {
+        background-size: 100% 60%;
+    }
+    
+    100% {
+        
+        background-size: 100% 100%;
+        background-position: center 3px;
+    }
+}
+.efectoGlowA a{
+    text-shadow: rgb(255, 255, 209) 0px 0px 9px;
+    color: rgb(255, 255, 255);
+}
+
+
+
+nav ul li a{
+    color: rgba(245, 245, 220, 0.63);
+    text-decoration: none;
+    font-size: 1.1rem;
+    z-index: 999;
+    
+}
+nav ul li a:hover{
+    text-shadow: rgb(255, 255, 209) 0px 0px 9px;
+    color: rgb(255, 255, 255);
+}

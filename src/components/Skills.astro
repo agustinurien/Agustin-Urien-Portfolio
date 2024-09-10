@@ -1,0 +1,130 @@
+---
+import { FaCss3Alt, FaGitAlt, FaHtml5, FaNodeJs, FaReact, FaSass } from "react-icons/fa";
+import { SiJavascript, SiAstro, SiFramer, SiMysql, SiExpress } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
+import { IoLogoFirebase } from "react-icons/io5";
+import { GrGraphQl, GrMysql } from "react-icons/gr";
+---
+
+
+<section>
+    <div class="contenedorSubtitulo">
+        <div class="line">
+
+        </div>
+        <h2 id="Projects" >
+            Skills
+        </h2>
+        <div class="line">
+
+        </div>
+    </div>
+    <div class="containerSkills">
+        <div class="skillsIndividual">
+            <h3>Frontend</h3>
+            
+                <ul>
+                    <li><FaHtml5 size={35}/></li>
+                    <li><FaCss3Alt size={35}/></li>
+                    <li><SiJavascript size={30}/></li>
+                    <li><SiAstro size={34}/></li>
+                    <li><FaReact size={35}/></li>
+                    <li><RiNextjsFill size={35}/></li>
+                    <li><FaSass size={35}/></li>
+                    <li><SiFramer size={30}/></li>
+                </ul>
+            
+        </div>
+        <div class="skillsIndividual">
+            <h3>Data/Connectivity</h3>
+            
+                <ul>
+                    <li><GrMysql size={35}/></li>
+                    <li><IoLogoFirebase size={35}/></li>
+                    <li><FaGitAlt size={35}/></li>
+                    <li><GrGraphQl size={30}/></li>
+                    <li><SiExpress size={35}/></li>
+                    <li><FaNodeJs size={35}/></li>
+                </ul>
+            
+    </div>
+</section>
+
+<style>
+    section {
+        padding-top: 100px;
+        background-color: #000000fd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        padding-bottom: 100px;
+    }
+    .contenedorSubtitulo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 75%;
+        margin-bottom: 20px;
+    }
+    h2{
+        font-family: 'DM Sans Regular', sans-serif;
+        color: #e7dece;
+        font-size: 3rem;
+        margin: 0px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .line{
+        
+        margin-top: 12px;
+        width: 100%;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.445);
+    }
+    .containerSkills {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+    h3{
+        font-family: 'DM Sans Regular', sans-serif;
+        color: #e7dece;
+        font-size: 1.3rem;
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+    .skillsIndividual{
+        flex-wrap: wrap;
+        width: 48%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+    ul{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        margin: 0px;
+        flex-wrap: wrap;
+        padding: 0px;
+        justify-content: center;
+    }
+    li{
+        width: 190px;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.541);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+    }
+    li:hover{
+        background-color: rgba(226, 214, 206, 0.973);
+        color: black;
+        box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.411);
+    }
+</style>

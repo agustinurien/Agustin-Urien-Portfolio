@@ -1,0 +1,109 @@
+---
+import Form from "./Form/Form";
+import { FaGithub, FaInstagram, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoMail } from "react-icons/io5";
+---
+
+<section id="Contact">
+        <div class="contenedorSubtitulo">
+            <h2 id="Projects">
+            Contact
+            </h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="formContainer">
+            <Form />
+            <div class="info">
+                <div class="details">
+                    <h3>Details</h3>
+                    <div > <FaLocationDot size={14}/><span>Buenos Aires, Argentina</span></div>
+                    <div><FaPhoneAlt size={14}/><span>+54 11 4149-1827</span></div>
+                    <div><IoMail size={14}/><span>agus.urien2@gmail.com</span></div>
+                </div>
+                <div class="links">
+                    <FaLinkedin className="logo" size={30} />
+                    <FaGithub  className="logo" size={30}/>
+                    <FaInstagram  className="logo" size={30}/>
+                </div>
+            </div>
+        </div>
+</section>
+
+<style>
+    section {
+        background-color: #000000fd;
+        padding-top: 100px;
+        color: white;
+        padding-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedorSubtitulo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 75%;
+        margin-bottom: 0px;
+    }
+    h2{
+        font-family: 'DM Sans Regular', sans-serif;
+        color: #e7dece;
+        font-size: 3rem;
+        margin: 0px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .line{
+        
+        margin-top: 12px;
+        width: 100%;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.445);
+    }
+    .formContainer{
+        
+        margin-top: 20px;
+        width: 73%;
+        display: flex;
+        
+    }
+    .info{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        margin-top: 20px;
+    }	
+    .details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+        font-family: 'DM Sans Regular', sans-serif;
+        color: #ffffffab;
+    }
+    .details div{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .details h3{
+        font-size: 1.5rem;
+        margin: 0px;
+        color: white;
+    }
+    .links{
+        display: flex;
+        gap: 15px;
+        color: #ffffffa6;
+    }
+    .logo:hover{
+        color: #ffffff;
+    }
+</style>

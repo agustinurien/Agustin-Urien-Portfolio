@@ -1,0 +1,191 @@
+---
+import Image from "astro/components/Image.astro";
+import image from "../assets/nebulaNest.png"
+import image2 from "../assets/tadeo.png"
+import image3 from "../assets/kinode.png"
+import image4 from "../assets/blog.png"
+import image5 from "../assets/ecommerce.png"
+import image6 from "../assets/price.png"
+import ProjectData from "./ProjectData.astro"
+
+
+
+const projects = [
+    {
+        title: "Nebula Nest",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies metus. Nulla nec purus feugiat, molestie ipsum et, ultricies metus.",
+        img: image,
+        tools: ["React", "Next", "Framer", "CSS", "Firebase"],
+        github:"https://github.com/agustinurien/nebulaNest",
+        page:"",
+    },
+    {
+        title: "Tadeo Funes",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies metus. Nulla nec purus feugiat, molestie ipsum et, ultricies metus.",
+        img: image2,
+        tools: ["React", "Next", "Framer", "CSS", "Firebase"],
+        github:"https://github.com/agustinurien/tadeoFunesWeb",
+        page:"https://tadeo-funes-web.vercel.app/",
+    },
+    {
+        title: "Kinode",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies metus. Nulla nec purus feugiat, molestie ipsum et, ultricies metus.",
+        img: image3,
+        tools: ["React", "Next", "Framer", "CSS", "Firebase"],
+        github:"https://github.com/agustinurien/kinode-task",
+        page:"https://kinode-task.vercel.app/",
+    },
+    {
+        title: "E-commerce copy",
+        description: "Playstation shop. The website allows users to browse through and buy PlayStation products. (copy)",
+        img: image5, 
+        tools: ["React", "CSS", "Firebase"],
+        github:"https://github.com/agustinurien/proyecto-react",
+        page:"https://proyecto-react-xi.vercel.app/",
+    },
+    {
+        title: "Blog INE",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies metus. Nulla nec purus feugiat, molestie ipsum et, ultricies metus.",
+        img: image4,
+        tools: ["React", "Next", "Framer", "CSS", "GraphQL"],
+        github:"https://github.com/agustinurien/Blog-INE",
+        page:"https://blog-ine-agustin-urien.vercel.app/",
+    },
+    {
+        title: "AlClick Tool",
+        description: "I spearheaded the development of a sophisticated software toolset tailored for a specific team.",
+        img: image6,
+        tools: ["React", "Framer", "CSS", "Python", "Firebase"],
+        github:"https://github.com/agustinurien/PriceCalculator",
+        page:"https://price-calculator2.vercel.app/",
+    }
+]
+
+---
+
+
+
+<section id="Projects" >
+    <div class="contenedorSubtitulo" >
+        <h2 >
+            Projects
+        </h2>
+        <div class="line">
+
+        </div>
+    </div>
+
+    <div class="contenedorProjects">
+        <div class="projects">
+            {
+                projects.map((project, index) => (
+                    <div class="wholeContainer">
+                        <div class="marco">
+                            <div class="imgContainer">
+                                <Image 
+                                src={project.img}
+                                alt="imagen" 
+                                class="img"
+                                />
+                            </div>
+                        </div>
+                        <ProjectData 
+                        git={project.github} 
+                        tools={project.tools} 
+                        title={project.title}
+                        descrip={project.description}
+                        />
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    section{
+        background-color: #000000fd;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 120px;
+        padding-bottom: 50px;
+    }
+    .contenedorSubtitulo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 75%;
+    }
+    h2{
+        font-family: 'DM Sans Regular', sans-serif;
+        color: #e7dece;
+        font-size: 3rem;
+        margin: 0px;
+        margin-right: 20px;
+    }
+    .line{
+        
+        margin-top: 12px;
+        width: 100%;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.445);
+    }
+
+    .contenedorProjects{
+        width: 80%;
+        color: white;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .projects{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+        gap: 20px;
+    }
+    .wholeContainer{
+        position: relative;
+        height: 340px;
+        width: 390px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .marco{
+        height: 90%;
+        width: 90%;
+        background-color: #0000005d;
+        border: 1px solid rgba(255, 255, 255, 0.705);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .imgContainer {
+    height: 79%;
+    width: 80%;
+    
+}
+.imgContainer:hover {
+    transform: translateY(-33px) rotate(3deg);
+    transition: transform 0.5s; 
+}
+.imgContainer:not(:hover) {
+    transition: transform 0.3s;
+}
+
+    .img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.678);
+    }
+
+</style>

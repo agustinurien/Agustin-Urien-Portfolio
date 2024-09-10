@@ -1,0 +1,76 @@
+---
+import { Image } from "astro:assets";
+import mySelf from "../assets/yo2.jpg";
+---
+
+<section id="About">
+    <div class="containerAboutme">
+        <div class="contenedorImagen">
+            <Image 
+            src={mySelf} 
+            class="imagen"
+            alt="my self." />
+            
+        </div>
+        <div class="textsAboutme">
+            <p>
+                My journey began with a passion for studying animation, fueled by a significant need for financial support. To address this challenge, I made the strategic decision to delve into web development. Starting with the fundamentals of HTML and CSS, I gradually immersed myself in the world of coding.
+            </p>
+            <p>
+                As I delved into JavaScript, a newfound interest blossomed. Eager to enhance both aesthetics and functionality, I further expanded my skill set by studying React, SQL, and Framer Motion. This comprehensive approach allowed me to not only create visually appealing web pages but also to optimize their performance and user experience. Through this transformative journey, I've not only gained proficiency in web development but also discovered a profound satisfaction in shaping digital experiences.
+            </p>
+            <p>
+                Looking ahead, I envision leveraging this coding expertise as a stepping stone to finding the courage and financial means to pursue my original dream of studying fine arts. While coding has captured my professional focus, I plan to embrace the world of visual arts as a cherished hobby, enriching my life with a harmonious blend of technology and creativity. This journey has not only opened doors to a promising career but has also illuminated a path towards a fulfilling balance between the realms of coding and artistic expression.
+            </p>
+        </div>
+        
+    </div>
+</section>
+
+<style>
+    section{
+        padding-top: 120px;
+        background-color: #000000fd;
+        display: flex;
+        justify-content: center;
+    }
+    .containerAboutme{
+        padding: 10px;
+        display: flex;
+        width: 75%;
+        height: 280px;
+        border: 1px solid rgba(255, 255, 255, 0.61);
+        gap: 20px;
+
+    }
+    .contenedorImagen{
+        height: 100%;
+    }
+    .imagen{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .textsAboutme{
+        
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        color: rgba(255, 255, 255, 0.884);
+        width: 100%;
+        height: 280px;
+        gap: 15px;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: #e7dece #00000000;
+    }
+
+    p{
+        padding-top: 7px;
+        font-family: 'DM Sans Regular', sans-serif;
+        color: rgba(255, 255, 255, 0.849);
+        margin: 0px;
+        width: 95%;
+    }
+</style>

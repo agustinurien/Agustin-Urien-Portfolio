@@ -1,0 +1,223 @@
+---
+import { Image } from "astro:assets";
+import mySelf from "../assets/yo2.jpg";
+import { PiArrowCircleDownThin } from "react-icons/pi";
+
+---
+
+<section class="backgroundHero">
+    <div class="center">
+
+        <div class="name">
+            <h1 class="agus">AGUSTIN</h1>
+            <h1>URIEN<strong>.</strong></h1>
+            <div class="contenedorImagen">
+                <Image 
+                src={mySelf} 
+                class="imagen"
+                alt="my self." />
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="contenedorParrafo">
+        <p>I am a Front-End Developer specializing in crafting visually captivating websites that delight users. With a seamless blend of technical mastery and artistic innovation, I create user-friendly digital experiences that leave a lasting impression.</p>
+    </div>
+    <div class="botonDown">
+        <PiArrowCircleDownThin size="2.3em" color="white"/>
+    </div>
+</section>
+
+<style>
+    .backgroundHero {
+        background-color: #000000fd;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        color: white;
+    }
+    .center{
+        position: relative;
+        margin-top: 100px;
+        
+        width: 50%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        
+
+    }
+    .center::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        
+        width: 65%;
+        border-bottom: 2px solid white;
+        left: 35%; /* Empieza desde el centro */
+        animation: slide3 1s;
+
+    }
+    @keyframes slide3 {
+    0% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    100% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+    .name {
+        position: relative;
+
+        width: 76%;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+    h1 {
+        font-family: 'DM Sans', sans-serif;
+        margin: 0px;
+        text-align: end;
+        font-size: 8rem;
+        z-index: 1;
+        color: #e7dece;
+        animation-name: slide2;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .agus{
+        text-align: start;
+        height: 125px;
+        animation-name: slide;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        
+        
+    }
+
+    @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateX(-200px);
+        }
+        
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes slide2 {
+        0% {
+            opacity: 0;
+            transform: translateX(200px);
+        }
+        
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    strong{
+        font-size: 8.5rem;
+        color: #e12c00;
+    }
+
+    .contenedorImagen{
+        
+        padding: 0px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    .imagen{
+        height: 100%;
+        width: auto;
+        filter: brightness(40%);
+        
+    }
+    .contenedorParrafo{
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        
+
+    }
+    p{
+        font-family: 'DM Sans Regular', sans-serif;
+        width: 50%;
+        text-align: center;
+        color: #e7decee8;
+        opacity: 0;
+        animation: appear 1s 0.3s;
+        animation-fill-mode: forwards;
+
+    }
+
+    @keyframes appear {
+        0% {
+            
+            
+        }
+        100% {
+            opacity: 1;
+            
+        }
+    }
+
+    .botonDown{
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 40px;
+        animation: move 2s infinite;
+        color: #e7dece;
+        opacity: 0.8;
+    }
+    @keyframes move {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(20px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<style is:global>
+    @font-face {
+  		font-family: 'DM Sans';
+  		src: url('/fonts/DMSans_18pt-ExtraBoldItalic.ttf') format('truetype');
+  		font-weight: 800;
+  		font-style: normal;
+  		font-display: swap;
+    }
+    @font-face {
+  		font-family: 'DM Sans Regular';
+  		src: url('/fonts/DMSans_18pt-Regular.ttf') format('truetype');
+  		font-weight: 400;
+  		font-style: normal;
+  		font-display: swap;
+    }
+    @font-face {
+  		font-family: 'WorkSans';
+  		src: url('/fonts/WorkSans-Regular.ttf') format('truetype');
+  		font-weight: 400;
+  		font-style: normal;
+  		font-display: swap;
+    }
+</style>
